@@ -1,0 +1,100 @@
+.header {
+    position: fixed;   /* changed from relative to fixed */
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 10%;
+    background: palevioletred;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;   /* keep navbar above all content */
+}
+
+body {
+    margin: 0;
+    padding-top: 90px;  /* height of navbar + spacing */
+}
+
+.logo {
+    font-size: 32px;
+    color: white;
+    font-weight: 600;
+}
+
+.navbar {
+    display: flex;
+    gap: 40px;
+    transition: right 0.3s ease-in-out;
+    flex-direction: row;
+    z-index: 1100;  /* above header so mobile menu overlays correctly */
+}
+
+.navbar a {
+    font-size: 25px;
+    color: white;
+    font-weight: 800;
+    text-decoration: none;
+    position: relative;
+}
+
+.navbar a::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 0;
+    top: 100%;
+    background: white;
+    transition: width 0.3s;
+}
+
+.navbar a:hover::before {
+    width: 100%;
+}
+
+/* Menu icon for mobile */
+.menu-icon {
+    display: none;
+    font-size: 35px;
+    color: rgb(4, 252, 239);
+    cursor: pointer;
+    z-index: 1200;  /* on top of everything */
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+    .navbar {
+        position: fixed;
+        top: 60px;
+        right: -250px; /* hidden initially */
+        flex-direction: column; /* stacked menu */
+        background: palevioletred;
+        width: 200px;
+        padding: 20px;
+        gap: 20px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+        z-index: 1100;
+    }
+
+    .navbar.active {
+        right: 0; /* show menu */
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}
+
+.main-heading {
+  position: relative;
+  z-index: 1100; /* higher than navbar */
+  background: white; /* or page background color */
+  padding: 15px 10%;
+  text-align: center;
+  font-size: 35px;
+  font-weight: 900;
+  color: rgb(243, 7, 7);
+  font-family: 'Times New Roman', Times, serif;
+  margin: 0;
+}

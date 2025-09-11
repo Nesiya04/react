@@ -1,0 +1,59 @@
+.h1 {
+    margin-top: 40px;
+    color: red;
+    font-weight: 600;
+    font-family: cursive;
+    text-align: center;
+}
+
+.container {
+    max-width: 100%;
+    margin-top: 30px;
+    display: flex;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 20px; 
+    justify-items: center;
+    padding:20px;
+
+}
+
+.container .image {
+    width: 100%;
+    height: 370px;
+    border-radius: 5%;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+    display: flex;
+    gap: 10px;
+    padding-bottom: 20px;
+    
+   
+}
+
+.herbal-tea{
+
+    margin-left: 40px;
+    border-radius: 10%;
+    float:left;
+    margin-top: 50px;
+   
+}
+.para1{
+    
+ padding: 50px;
+    padding-top: 130px;
+    font-family: cursive;
+    color: rgb(241, 12, 88);
+    font-weight: 600;
+    font-size: 20px;
+     justify-content: center;
+}
+
+
+.herbal-tea:hover{
+    border-radius: 50px;
+}
+
+
+
+
