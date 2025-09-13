@@ -20,7 +20,8 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https://Nesiya04.github.io/react",
+  "homepage": "https://Nesiya04.github.io/react/",
+
   "browserslist": {
     "production": [
       ">0.2%",
